@@ -1,9 +1,16 @@
 package com.Online_Banking_Application.Online_Banking_Application.Models;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
+import javax.persistence.*;
+
+@Getter
+@Setter
+@Data
+@Entity
+@Table(name = "statement")
 public class Statement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
