@@ -9,7 +9,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "transaction")
 public class Transaction_Controller {
-    //    http://localhost:8080/attendee/getAll
+    //    http://localhost:8080/transaction/getAll
     @Autowired
     Transaction_Service transaction_service;
     @RequestMapping(value = "getAll", method = RequestMethod.GET)

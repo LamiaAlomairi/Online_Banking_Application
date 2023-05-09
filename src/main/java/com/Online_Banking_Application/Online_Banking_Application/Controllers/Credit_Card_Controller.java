@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "credit_card")
 public class Credit_Card_Controller {
-    //    http://localhost:8080/attendee/getAll
+    //    http://localhost:8080/credit_card/getAll
     @Autowired
     Credit_Card_Service credit_card_service;
     @RequestMapping(value = "getAll", method = RequestMethod.GET)

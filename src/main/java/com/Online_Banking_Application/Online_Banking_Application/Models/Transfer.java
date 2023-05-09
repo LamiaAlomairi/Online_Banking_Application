@@ -23,11 +23,7 @@ public class Transfer {
     Double amount;
     String description;
 
-//    @ManyToMany(mappedBy = "transfer")
-//    @JsonIgnore
-//    private List<Account> accounts;
-
-//    @ManyToMany
-//    @JoinTable(name = "account_transfer", joinColumns = @JoinColumn(name = "transfer_id"), inverseJoinColumns = @JoinColumn(name = "account_id"))
-//    private List<Account> accounts;
+    @ManyToMany(mappedBy = "transfers")
+    @JsonIgnore
+    private List<Account> accounts;
 }

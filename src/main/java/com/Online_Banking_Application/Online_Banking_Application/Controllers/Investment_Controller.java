@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "investment")
 public class Investment_Controller {
-    //    http://localhost:8080/attendee/getAll
+    //    http://localhost:8080/investment/getAll
     @Autowired
     Investment_Service investment_service;
     @RequestMapping(value = "getAll", method = RequestMethod.GET)

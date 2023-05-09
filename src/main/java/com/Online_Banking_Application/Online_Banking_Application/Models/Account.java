@@ -28,13 +28,9 @@ public class Account {
     @JsonIgnore
     private List<Transaction> transactions;
 
-//    @ManyToMany
-//    @JoinTable(name = "account_transfer", joinColumns = @JoinColumn(name = "account_id"), inverseJoinColumns = @JoinColumn(name = "transfer_id"))
-//    private List<Transfer> transfers;
-
-//    @ManyToMany(mappedBy = "account")
-//    @JsonIgnore
-//    private List<Transfer> transfers;
+    @ManyToMany
+    @JoinTable(name = "event_attendees", joinColumns = @JoinColumn(name = "account_id"), inverseJoinColumns = @JoinColumn(name = "transfer_id"))
+    private List<Transfer> transfers;
 
     @OneToMany(mappedBy = "account")
     @JsonIgnore

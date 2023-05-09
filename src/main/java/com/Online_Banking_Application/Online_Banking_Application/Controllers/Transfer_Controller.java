@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "transfer")
 public class Transfer_Controller {
-    //    http://localhost:8080/attendee/getAll
+    //    http://localhost:8080/transfer/getAll
     @Autowired
     Transfer_Service transfer_service;
     @RequestMapping(value = "getAll", method = RequestMethod.GET)

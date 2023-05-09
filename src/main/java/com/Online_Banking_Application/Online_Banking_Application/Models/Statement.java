@@ -15,6 +15,7 @@ public class Statement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long statement_id;
+
     String start_date;
     String end_date;
     String transaction;

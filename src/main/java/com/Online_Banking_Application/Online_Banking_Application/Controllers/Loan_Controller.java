@@ -9,7 +9,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "loan")
 public class Loan_Controller {
-    //    http://localhost:8080/attendee/getAll
+    //    http://localhost:8080/loan/getAll
     @Autowired
     Loan_Service loan_service;
     @RequestMapping(value = "getAll", method = RequestMethod.GET)
