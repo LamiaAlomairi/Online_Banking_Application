@@ -19,4 +19,7 @@ public class Investment {
     String date_purchased;
     String current_value;
 
+    @ManyToOne
+    @JoinColumn(name = "account_id", referencedColumnName = "account_id")
+    Account account;
 }

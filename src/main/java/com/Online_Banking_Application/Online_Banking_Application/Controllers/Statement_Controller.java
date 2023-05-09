@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "statement")
 public class Statement_Controller {
-    //    http://localhost:8080/attendee/getAll
+    //    http://localhost:8080/statement/getAll
     @Autowired
     Statement_Service statement_service;
     @RequestMapping(value = "getAll", method = RequestMethod.GET)

@@ -20,4 +20,7 @@ public class Loan {
     Integer term;
     Long payment_amount;
 
+    @ManyToOne
+    @JoinColumn(name = "account_id", referencedColumnName = "account_id")
+    Account account;
 }

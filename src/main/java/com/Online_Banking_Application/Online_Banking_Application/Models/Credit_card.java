@@ -21,4 +21,7 @@ public class Credit_card {
     Integer interest_rate;
     String payment_due_date;
 
+    @ManyToOne
+    @JoinColumn(name = "account_id", referencedColumnName = "account_id")
+    Account account;
 }

@@ -20,4 +20,8 @@ public class Statement {
     String transaction;
     Double starting_balance;
     Double ending_balance;
+
+    @ManyToOne
+    @JoinColumn(name = "account_id", referencedColumnName = "account_id")
+    Account account;
 }

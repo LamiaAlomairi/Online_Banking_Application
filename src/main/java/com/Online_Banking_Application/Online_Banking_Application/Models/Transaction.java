@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -18,5 +19,10 @@ public class Transaction {
     String date;
     Double amount;
     String description;
+
+    @ManyToOne
+    @JoinColumn(name = "account_id", referencedColumnName = "account_id")
+    Account account;
+
 
 }
