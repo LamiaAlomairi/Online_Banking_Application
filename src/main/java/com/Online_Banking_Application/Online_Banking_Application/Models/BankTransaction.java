@@ -10,19 +10,18 @@ import javax.persistence.*;
 @Setter
 @Data
 @Entity
-@Table(name = "statement")
-public class Statement {
+@Table(name = "transactions")
+public class BankTransaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long statement_id;
-
-    String start_date;
-    String end_date;
-    String transaction;
-    Double starting_balance;
-    Double ending_balance;
+    Long transaction_id;
+    String date;
+    Double amount;
+    String description;
 
     @ManyToOne
     @JoinColumn(name = "account_id", referencedColumnName = "account_id")
     Account account;
+
+
 }

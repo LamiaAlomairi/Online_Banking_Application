@@ -26,10 +26,10 @@ public class Account {
 
     @OneToMany(mappedBy = "account")
     @JsonIgnore
-    private List<Transaction> transactions;
+    private List<BankTransaction> transactions;
 
     @ManyToMany
-    @JoinTable(name = "event_attendees", joinColumns = @JoinColumn(name = "account_id"), inverseJoinColumns = @JoinColumn(name = "transfer_id"))
+    @JoinTable(name = "account_transfer", joinColumns = @JoinColumn(name = "account_id"), inverseJoinColumns = @JoinColumn(name = "transfer_id"))
     private List<Transfer> transfers;
 
     @OneToMany(mappedBy = "account")
@@ -46,5 +46,5 @@ public class Account {
 
     @OneToMany(mappedBy = "account")
     @JsonIgnore
-    private List<Statement> statements;
+    private List<BankStatement> bankStatements;
 }

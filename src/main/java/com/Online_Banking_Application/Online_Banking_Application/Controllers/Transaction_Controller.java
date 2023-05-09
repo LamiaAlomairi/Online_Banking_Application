@@ -1,6 +1,6 @@
 package com.Online_Banking_Application.Online_Banking_Application.Controllers;
 
-import com.Online_Banking_Application.Online_Banking_Application.Models.Transaction;
+import com.Online_Banking_Application.Online_Banking_Application.Models.BankTransaction;
 import com.Online_Banking_Application.Online_Banking_Application.Services.Transaction_Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -13,12 +13,12 @@ public class Transaction_Controller {
     @Autowired
     Transaction_Service transaction_service;
     @RequestMapping(value = "getAll", method = RequestMethod.GET)
-    public List<Transaction> getAllTransactions() {
+    public List<BankTransaction> getAllTransactions() {
 
         return transaction_service.getAllTransactions();
     }
     @GetMapping(value = "getById")
-    public Transaction getTransactionById(@RequestParam Long id) {
+    public BankTransaction getTransactionById(@RequestParam Long id) {
 
         return transaction_service.getTransactionById(id);
     }

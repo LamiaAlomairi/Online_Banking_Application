@@ -1,6 +1,6 @@
 package com.Online_Banking_Application.Online_Banking_Application.Services;
 
-import com.Online_Banking_Application.Online_Banking_Application.Models.Transaction;
+import com.Online_Banking_Application.Online_Banking_Application.Models.BankTransaction;
 import com.Online_Banking_Application.Online_Banking_Application.Repositories.Transaction_Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,12 +11,12 @@ import java.util.List;
 public class Transaction_Service {
     @Autowired
     Transaction_Repository transaction_repository;
-    public List<Transaction> getAllTransactions() {
+    public List<BankTransaction> getAllTransactions() {
 
         return transaction_repository.findAll();
     }
 
-    public Transaction getTransactionById(Long id) {
+    public BankTransaction getTransactionById(Long id) {
 
         return transaction_repository.findById(id).get();
     }

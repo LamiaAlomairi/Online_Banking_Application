@@ -5,24 +5,24 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Getter
 @Setter
 @Data
 @Entity
-@Table(name = "transaction")
-public class Transaction {
+@Table(name = "bankstatement")
+public class BankStatement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long transaction_id;
-    String date;
-    Double amount;
-    String description;
+    Long statement_id;
+
+    String start_date;
+    String end_date;
+    String bankTransaction;
+    Double starting_balance;
+    Double ending_balance;
 
     @ManyToOne
     @JoinColumn(name = "account_id", referencedColumnName = "account_id")
     Account account;
-
-
 }
