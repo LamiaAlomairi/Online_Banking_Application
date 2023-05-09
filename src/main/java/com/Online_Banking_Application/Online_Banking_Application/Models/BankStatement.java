@@ -18,7 +18,7 @@ public class BankStatement {
 
     String start_date;
     String end_date;
-    String bankTransaction;
+    String bank_transaction;
     Double starting_balance;
     Double ending_balance;
 
