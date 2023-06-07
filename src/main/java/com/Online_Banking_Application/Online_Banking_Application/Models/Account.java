@@ -16,12 +16,12 @@ import java.util.List;
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long account_id;
-    Long account_number;
+    Long id;
+    Long accountNumber;
     Double balance;
 
     @ManyToOne
-    @JoinColumn(name = "customer_id", referencedColumnName = "customer_id")
+    @JoinColumn(name = "customer_id", referencedColumnName = "id")
     Customer customer;
 
     @OneToMany(mappedBy = "account")
@@ -38,7 +38,7 @@ public class Account {
 
     @OneToMany(mappedBy = "account")
     @JsonIgnore
-    private List<Credit_card> credit_cards;
+    private List<CreditCard> creditCards;
 
     @OneToMany(mappedBy = "account")
     @JsonIgnore

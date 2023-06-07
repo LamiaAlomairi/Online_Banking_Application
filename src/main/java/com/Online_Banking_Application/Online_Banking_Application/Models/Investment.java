@@ -14,12 +14,12 @@ import javax.persistence.*;
 public class Investment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long investment_id;
+    Long id;
     Double amount;
-    String date_purchased;
-    String current_value;
+    String datePurchased;
+    String currentValue;
 
     @ManyToOne
-    @JoinColumn(name = "account_id", referencedColumnName = "account_id")
+    @JoinColumn(name = "account_id", referencedColumnName = "id")
     Account account;
 }

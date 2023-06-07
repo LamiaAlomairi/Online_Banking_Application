@@ -14,13 +14,13 @@ import javax.persistence.*;
 public class Loan {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long loan_id;
-    Double principal_amount;
-    Integer interest_rate;
+    Long id;
+    Double principalAmount;
+    Integer interestRate;
     Integer term;
-    Long payment_amount;
+    Long paymentAmount;
 
     @ManyToOne
-    @JoinColumn(name = "account_id", referencedColumnName = "account_id")
+    @JoinColumn(name = "account_id", referencedColumnName = "id")
     Account account;
 }

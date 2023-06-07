@@ -14,13 +14,13 @@ import javax.persistence.*;
 public class BankTransaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long transaction_id;
+    Long id;
     String date;
     Double amount;
     String description;
 
     @ManyToOne
-    @JoinColumn(name = "account_id", referencedColumnName = "account_id")
+    @JoinColumn(name = "account_id", referencedColumnName = "id")
     Account account;
 
 

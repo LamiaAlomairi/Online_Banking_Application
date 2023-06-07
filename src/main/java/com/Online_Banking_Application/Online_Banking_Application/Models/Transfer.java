@@ -16,9 +16,9 @@ import java.util.List;
 public class Transfer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long transfer_id;
-    Long from_account_id;
-    Long to_account_id;
+    Long id;
+    Long fromAccountId;
+    Long toAccountId;
     String date;
     Double amount;
     String description;

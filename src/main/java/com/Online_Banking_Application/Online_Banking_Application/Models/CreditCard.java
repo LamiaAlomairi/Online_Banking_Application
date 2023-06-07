@@ -11,17 +11,17 @@ import javax.persistence.*;
 @Data
 @Entity
 @Table(name = "credit_card")
-public class Credit_card {
+public class CreditCard {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long card_id;
-    Long card_number;
+    Long id;
+    Long cardNumber;
     Integer limit;
     Double balance;
-    Integer interest_rate;
-    String payment_due_date;
+    Integer interestRate;
+    String paymentDueDate;
 
     @ManyToOne
-    @JoinColumn(name = "account_id", referencedColumnName = "account_id")
+    @JoinColumn(name = "account_id", referencedColumnName = "id")
     Account account;
 }

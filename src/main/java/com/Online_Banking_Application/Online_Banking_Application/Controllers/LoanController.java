@@ -1,25 +1,25 @@
 package com.Online_Banking_Application.Online_Banking_Application.Controllers;
 
 import com.Online_Banking_Application.Online_Banking_Application.Models.Loan;
-import com.Online_Banking_Application.Online_Banking_Application.Services.Loan_Service;
+import com.Online_Banking_Application.Online_Banking_Application.Services.LoanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
 @RequestMapping(value = "loan")
-public class Loan_Controller {
+public class LoanController {
     //    http://localhost:8080/loan/getAll
     @Autowired
-    Loan_Service loan_service;
+    LoanService loanService;
     @RequestMapping(value = "getAll", method = RequestMethod.GET)
     public List<Loan> getAllLoans() {
 
-        return loan_service.getAllLoans();
+        return loanService.getAllLoans();
     }
     @GetMapping(value = "getById")
     public Loan getLoanById(@RequestParam Long id) {
 
-        return loan_service.getLoanById(id);
+        return loanService.getLoanById(id);
     }
 }

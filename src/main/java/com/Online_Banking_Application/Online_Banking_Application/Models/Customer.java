@@ -16,7 +16,7 @@ import java.util.List;
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long customer_id;
+    Long id;
     String name;
     String email;
     Integer phone;

@@ -14,15 +14,15 @@ import javax.persistence.*;
 public class BankStatement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long statement_id;
+    Long id;
 
-    String start_date;
-    String end_date;
-    String bank_transaction;
-    Double starting_balance;
-    Double ending_balance;
+    String startDate;
+    String endDate;
+    String bankTransaction;
+    Double startingBalance;
+    Double endingBalance;
 
     @ManyToOne
-    @JoinColumn(name = "account_id", referencedColumnName = "account_id")
+    @JoinColumn(name = "account_id", referencedColumnName = "id")
     Account account;
 }
